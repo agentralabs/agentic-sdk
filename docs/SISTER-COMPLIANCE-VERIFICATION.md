@@ -6,10 +6,10 @@
 
 ---
 
-## Step A: agentic-contracts Crate ✅ COMPLETE
+## Step A: agentic-sdk Crate ✅ COMPLETE
 
 ```
-agentic-contracts/
+agentic-sdk/
 ├── Cargo.toml
 ├── README.md
 └── src/
@@ -31,10 +31,10 @@ TOTAL: ~95KB of Rust code defining all contracts
 
 ```bash
 # 1. Copy to your workspace
-cp -r agentic-contracts /path/to/your/repos/
+cp -r agentic-sdk /path/to/your/repos/
 
 # 2. Verify it compiles
-cd agentic-contracts
+cd agentic-sdk
 cargo check
 cargo test
 
@@ -89,7 +89,7 @@ COMPLIANCE STATUS:
 
 CHANGES NEEDED:
 ───────────────
-1. Add dependency: agentic-contracts = "0.1"
+1. Add dependency: agentic-sdk = "0.2"
 2. Implement ContextManagement trait (map Session to Context)
 3. Add EventEmitter with EventManager
 4. Add context MCP tools
@@ -132,7 +132,7 @@ COMPLIANCE STATUS:
 
 CHANGES NEEDED:
 ───────────────
-1. Add dependency: agentic-contracts = "0.1"
+1. Add dependency: agentic-sdk = "0.2"
 2. Implement ContextManagement (Archive → Context)
 3. Add EventEmitter
 4. Add context MCP tools
@@ -171,7 +171,7 @@ COMPLIANCE STATUS:
 
 CHANGES NEEDED:
 ───────────────
-1. Add dependency: agentic-contracts = "0.1"
+1. Add dependency: agentic-sdk = "0.2"
 2. Implement ContextManagement (Workspace → Context)
 3. Add EventEmitter
 4. Add context MCP tools
@@ -211,7 +211,7 @@ COMPLIANCE STATUS:
 
 CHANGES NEEDED:
 ───────────────
-1. Add dependency: agentic-contracts = "0.1"
+1. Add dependency: agentic-sdk = "0.2"
 2. Implement ContextManagement (Chain → Context)
 3. Add EventEmitter
 4. Add context MCP tools
@@ -227,26 +227,26 @@ PRIORITY ORDER:
 ───────────────
 
 1. IDENTITY (First - it's the receipt system)
-   □ Add agentic-contracts dependency
+   □ Add agentic-sdk dependency
    □ Verify Receipt schema matches
    □ Add ContextManagement
    □ Add EventEmitter
    □ Add context MCP tools
 
 2. MEMORY (Second - most used sister)
-   □ Add agentic-contracts dependency
+   □ Add agentic-sdk dependency
    □ Map Session → Context
    □ Add EventEmitter
    □ Add context MCP tools
 
 3. VISION (Third)
-   □ Add agentic-contracts dependency
+   □ Add agentic-sdk dependency
    □ Map Archive → Context
    □ Add EventEmitter
    □ Add context MCP tools
 
 4. CODEBASE (Fourth)
-   □ Add agentic-contracts dependency
+   □ Add agentic-sdk dependency
    □ Map Workspace → Context
    □ Add EventEmitter
    □ Add context MCP tools
@@ -272,10 +272,10 @@ TOTAL ALL 4: ~2-3 days
 ```rust
 // new_sister/Cargo.toml
 [dependencies]
-agentic-contracts = "0.1"
+agentic-sdk = "0.2"
 
 // new_sister/src/lib.rs
-use agentic_contracts::prelude::*;
+use agentic_sdk::prelude::*;
 
 pub struct AgenticTime {
     config: SisterConfig,
@@ -308,7 +308,7 @@ impl ReceiptIntegration for AgenticTime { ... }
 BEFORE RELEASE, NEW SISTER MUST:
 ────────────────────────────────
 
-□ Depend on agentic-contracts
+□ Depend on agentic-sdk
 □ Implement Sister trait
 □ Implement ContextManagement trait
 □ Implement Grounding trait
@@ -399,7 +399,7 @@ CANONICAL DOCUMENTS:
    → JSON schemas
    → Error responses
 
-📦 agentic-contracts/
+📦 agentic-sdk/
    → Rust crate
    → Single source of truth
    → All sisters depend on this

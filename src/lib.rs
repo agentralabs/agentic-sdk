@@ -17,7 +17,7 @@
 //! ## What changed in v0.2.0
 //!
 //! v0.1.0 was written based on THEORY. v0.2.0 was validated against REALITY
-//! (the actual implementations in 5 shipped sisters).
+//! (the actual implementations in 8 shipped sisters).
 //!
 //! Key changes:
 //! - `SisterFileHeader` (96-byte "AGNT") → `FileFormatReader`/`FileFormatWriter` traits

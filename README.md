@@ -34,7 +34,7 @@ impl Sister for MyNewSister {
 ```
 
 ### SessionManagement Trait
-Append-only sequential sessions (Memory, Vision, Identity):
+Append-only sequential sessions (Memory, Vision, Identity, Contract, Comm):
 
 ```rust
 impl SessionManagement for MyNewSister {
@@ -47,7 +47,7 @@ impl SessionManagement for MyNewSister {
 ```
 
 ### WorkspaceManagement Trait
-Switchable named workspaces (Codebase):
+Switchable named workspaces (Codebase, Planning):
 
 ```rust
 impl WorkspaceManagement for MyNewSister {
@@ -137,6 +137,9 @@ let err = ProtocolError::invalid_params("missing required field 'name'");
 | Codebase | `SisterType::Codebase` | `.acb` | ✅ Shipped |
 | Identity | `SisterType::Identity` | `.aid` | ✅ Shipped |
 | Time | `SisterType::Time` | `.atime` | ✅ Shipped |
+| Contract | `SisterType::Contract` | `.acon` | ✅ Shipped |
+| Comm | `SisterType::Comm` | `.acomm` | ✅ Shipped |
+| Planning | `SisterType::Planning` | `.aplan` | ✅ Shipped |
 
 ## License
 

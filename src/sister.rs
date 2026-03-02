@@ -132,7 +132,8 @@ impl SisterConfig {
 /// The core trait that ALL sisters must implement.
 ///
 /// This is the foundation of the sister ecosystem. Every sister—Memory, Vision,
-/// Codebase, Identity, Time, and all future sisters—must implement this trait.
+/// Codebase, Identity, Time, Contract, Comm, Planning, and all future sisters—
+/// must implement this trait.
 pub trait Sister: Send + Sync {
     /// The type of this sister
     const SISTER_TYPE: SisterType;
